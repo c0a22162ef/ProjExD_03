@@ -284,7 +284,7 @@ def main():
                     del bombs[i]
                     bird.change_img(6, screen)
                     break
-        
+        """書ききれなかった
         if beam2 is not None:  # ビーム2が存在しているとき
             beam.update(screen)
             for i, bomb in enumerate(bombs):
@@ -293,7 +293,7 @@ def main():
                     del bombs[i]
                     bird2.change_img(6, screen)
                     break
-
+        """
         pg.display.update()
         clock.tick(1000)
 
