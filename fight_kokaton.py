@@ -165,6 +165,11 @@ def main():
             if bomb is not None and beam._rct.colliderect(bomb._rct):
                 beam = None
                 bomb = None
+                # ゲームクリア時に，こうかとん画像を切り替え，1秒間表示させる
+                bird.change_img(2, screen)
+                pg.display.update()
+                time.sleep(1)
+                return
                 
         bomb.update(screen)
         pg.display.update()
