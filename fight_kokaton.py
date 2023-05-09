@@ -89,7 +89,7 @@ class Bird:
 
 class Bird2:
     """
-    ゲームキャラクター（こうかとん）に関するクラス
+    ゲームキャラクター（こうかとん２）に関するクラス
     """
     _delta = {  # 押下キーと移動量の辞書
         pg.K_w: (0, -1),
@@ -101,8 +101,8 @@ class Bird2:
     def __init__(self, num: int, xy: tuple[int, int]):
         """
         こうかとん画像Surfaceを生成する
-        引数1 num：こうかとん画像ファイル名の番号
-        引数2 xy：こうかとん画像の位置座標タプル
+        引数1 num：こうかとん２画像ファイル名の番号
+        引数2 xy：こうかとん２画像の位置座標タプル
         """
         img0 = pg.transform.rotozoom(pg.image.load(f"fig/{num}.png"), 0, 2.0)  # 左向き，2倍
         img1 = pg.transform.flip(img0, True, False)  # 右向き，2倍
@@ -230,8 +230,8 @@ def main():
     clock = pg.time.Clock()
     bg_img = pg.image.load("fig/pg_bg.jpg")
 
-    bird = Bird(3, (900, 400))
-    bird2 = Bird2(3, (900, 400))
+    bird = Bird(3, (900, 400))   #こうかとん１
+    bird2 = Bird2(3, (900, 400)) #こうかとん２
     bombs = [Bomb() for _ in range(NUM_OF_BOMBS)]
     beam = None
     beam2 = None
